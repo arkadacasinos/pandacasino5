@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pandacasino5.vercel.app/sitemap.xml

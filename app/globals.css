@@ -1,0 +1,295 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme inline {
+  --font-sans: 'Inter Variable', sans-serif;
+  --color-background: #0b0c10;
+  --color-foreground: #f1f3f7;
+}
+
+:root {
+  color-scheme: dark;
+  --background: #0b0c10;
+  --foreground: #f1f3f7;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #0b0c10;
+    color: #f1f3f7;
+  }
+  body {
+    background-color: #0b0c10;
+    color: #f1f3f7;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Mangled class styling for SEO landing components */
+  .p7d2-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #0b0c10;
+    color: #f1f3f7;
+  }
+
+  .p7d2-layout-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+  }
+
+  .p7d2-sidebar {
+    width: 58px;
+    flex-shrink: 0;
+    background-color: #121319;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    gap: 8px;
+    z-index: 40;
+  }
+
+  .p7d2-main-content {
+    flex: 1 1 0%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p7d2-topbar {
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #0b0c10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+
+  .p7d2-search-input-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #1a1c24;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 280px;
+    color: #9da3b4;
+    font-size: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.2s;
+  }
+
+  .p7d2-search-input-box:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .p7d2-auth-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .p7d2-btn-login {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    border-radius: 9999px;
+    background-color: #232530;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+
+  .p7d2-btn-login:hover {
+    background-color: #2e3140;
+  }
+
+  .p7d2-btn-reg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border-radius: 9999px;
+    background-color: #f5a623;
+    color: #121319;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+
+  .p7d2-btn-reg:hover {
+    background-color: #ffb738;
+    transform: translateY(-1px);
+  }
+
+  .p7d2-hero-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 0.9fr 0.9fr;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .p7d2-banner-main {
+    background: radial-gradient(circle at 10% 20%, #0d3826 0%, #081a13 70%);
+    border: 1px solid rgba(46, 213, 115, 0.2);
+    border-radius: 20px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  .p7d2-banner-sub {
+    background-color: #161821;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.2s, border-color 0.2s;
+  }
+
+  .p7d2-banner-sub:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .p7d2-ticker-wrap {
+    padding: 0 16px 14px 16px;
+    overflow-x: auto;
+    display: flex;
+    gap: 10px;
+    scrollbar-width: none;
+  }
+
+  .p7d2-ticker-wrap::-webkit-scrollbar {
+    display: none;
+  }
+
+  .p7d2-ticker-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #14161f;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 8px 12px;
+    flex-shrink: 0;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s;
+  }
+
+  .p7d2-ticker-card:hover {
+    border-color: rgba(245, 166, 35, 0.4);
+  }
+
+  .p7d2-seo-article {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 32px 16px 64px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .p7d2-cta-banner {
+    background: linear-gradient(135deg, #1b2820 0%, #111a15 100%);
+    border: 1px solid rgba(46, 213, 115, 0.3);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .p7d2-cta-banner {
+      flex-direction: row;
+      text-align: left;
+    }
+  }
+
+  .p7d2-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #090a0d;
+    padding: 32px 16px;
+    margin-top: auto;
+  }
+
+  .p7d2-hashtag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .p7d2-hashtag-tag {
+    font-size: 12px;
+    color: #8f96a8;
+    background-color: #14161f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 5px 12px;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .p7d2-hashtag-tag:hover {
+    color: #f5a623;
+    border-color: #f5a623;
+  }
+
+  /* Mobile responsive overrides */
+  @media (max-width: 1024px) {
+    .p7d2-hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .p7d2-banner-sub {
+      min-height: 160px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .p7d2-sidebar {
+      display: none;
+    }
+  }
+}
